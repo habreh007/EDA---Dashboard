@@ -9,7 +9,7 @@ import plotly.express as px
 st.set_page_config(page_title="Pak-Ind War 2025 Dashboard", layout="wide")
 
 # Load data
-st.cache_data
+@st.cache_data
 def load_data():
     df = pd.read_csv("india_pakistan_conflict.csv")  # replace with your file
     df['Date'] = pd.to_datetime(df['Date'])
@@ -77,6 +77,7 @@ st.plotly_chart(fig5, use_container_width=True)
 # ------------------ Footer ------------------ #
 st.markdown("---")
 st.markdown("<h5 style='text-align: center; color: gray;'>Made  by Habib</h5>", unsafe_allow_html=True)
+
 
 
 
